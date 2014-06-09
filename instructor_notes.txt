@@ -1,0 +1,30 @@
+## Ruby Hashes
+
+The Ruby Hash class implements a "data structure" that provides a
+collection of key-value pairs. The keys are used to 'index', or find,
+the value associated with the value.
+
+ne_states = {'MA': 'Massachucetts', 'NH': 'New Hampshire', 'ME': 'Main', 'RI': 'Rhode Island', 'CONN': "Conneticut", 'VT': 'Vermont'}
+
+
+This hash has 6 key-value pairs. The keys are 'MA', 'NH',etc.
+
+To access a state name we use the key as an index.
+ri_name = ne_states['RI']  // Set ri_name to 'Rhode Island'
+ma_name = ne_states['MA']
+
+Notice how this is similar to an Array. We use a key instead of a number to index, or find a value. 
+
+In fact, we can use any object as the key or the value. 
+
+squares = {3: 'nine', 4: 'sixteen', 5, 'twenty-five'}
+
+### Lab write a program that takes a minimum and maximum number and
+    produces a Hash of the squares from the min to the max. Show the
+    resulting Hash.
+
+
+Hashes, like Array can be embedded in each other.
+see _relative_contacts.rb_.
+
+
