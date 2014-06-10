@@ -35,15 +35,13 @@ Modify _choose_state.rb_ to prompt and get a New England state code from the use
 Create a file _relative_contacts.rb_.   
 Finished version is  _relative_contacts_done.rb_
 
-### Lab
-__Need a lab here__
-
 ### Demo
 Modify the file hash_methods.rb.  
 Finished version is in hash_methods_done.rb
 
 ### Lab
-__Need a lab here__
+Modify the file _employment_lab.rb_. The directions are in the comments.  
+Finished version is in _employment_lab_done.rb_.  
 
 ### Hash#fetch (Advanced)
 * Used to cause an error where you initially get a non-existent key/entry.
