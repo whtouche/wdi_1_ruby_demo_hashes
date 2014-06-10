@@ -134,3 +134,4 @@ puts diff # diff is {"a"=>1, "b"=>2}
 h1 = { a: 'foo', b: 'bar' }
 h2 = h1.inject({}) { |h, (k, v)| h[k.upcase] = v.upcase; h }
 puts h2
+# Check out Hash#delete, Hash#empty?

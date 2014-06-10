@@ -1,3 +1,15 @@
+## Ruby Symbols
+Symbols are immutable strings. And they save memory by not creating                          new object for each value.                                                                   
+
+Symbols work well when we want to refer to the same thing string multiple times throughout a program.  
+  
+For example, if we had to use the string "foo" in many                   places in the program it would create an object for each time we                                used the string "foo". You may want to use the symbol :foo instead.
+
+Symbols work well as Hash Keys. 
+
+### Demo
+Go thru symbols.rb
+
 ## Ruby Hashes
 
 The Ruby Hash class implements a "data structure" that provides a
@@ -33,3 +45,8 @@ Finished version is in hash_methods_done.rb
 ### Lab
 __Need a lab here__
 
+### Hash#fetch (Advanced)
+* Used to cause an error where you initially get a non-existent key/entry.
+* And to set a default value for an key from a hash.
+
+Work thru hash_fetch.rb
