@@ -23,3 +23,13 @@ Modify _choose_state.rb_ to prompt and get a New England state code from the use
 Create a file _relative_contacts.rb_.   
 Finished version is  _relative_contacts_done.rb_
 
+### Lab
+__Need a lab here__
+
+### Demo
+Modify the file hash_methods.rb.  
+Finished version is in hash_methods_done.rb
+
+### Lab
+__Need a lab here__
+
