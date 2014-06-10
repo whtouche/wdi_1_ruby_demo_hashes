@@ -3,7 +3,6 @@ require 'pry'
 # set a breakpoint here.
 # binding.pry
 
-# A Hash can have a Symbol as a Key and a String as a value.
 relative_contacts = {
   frank: 'Frank Blackpot',
   dottie: 'Dottie Spiggot'
@@ -20,15 +19,6 @@ relative_contacts = {
   dottie: ['Dottie','Spiggot']
 }
 puts "Frank's full name is #{relative_contacts[:frank][0]} #{relative_contacts[:frank][1]}"
-puts "relative_contacts points to the Hash object with an id of #{relative_contacts.object_id}"
-
-# Same as above. We're assigning another, different, Hash object to
-# to the relative_contacts variable.
-relative_contacts = {
-  frank: { name: ['Frank', 'Blackpot']},
-  dottie: { name: ['Dottie','Spiggot']}
-}
-puts "relative_contacts points to the Hash object with an id of #{relative_contacts.object_id}"
 
 # Same as above BUT add a phone key-value pair where the key is the symbol :phone
 # and the value is a string representing the phone #.
@@ -52,7 +42,21 @@ relative_contacts[:frank][:address] = {
   city: 'Portland',
   street_address: '67 Elm St.'
 }
-puts "relative_contacts points to the Hash object with an id of #{relative_contacts.object_id}"
-puts "franks contact info is #{relative_contacts[:frank]}"
+relative_contacts[:dottie][:address] = {
+  state: 'RI',
+  city: 'Pawtucket',
+  # 2 address, first is main home, second is work
+  street_address: ['44 Warren St.', '567 Main St.']
+}
 
+puts "franks contact info is #{relative_contacts[:frank]}"
+puts "dottie's contact info is #{relative_contacts[:dottie]}"
+
+# Dottie move across the street
+relative_contacts[:dottie][:address][:street_address][0] = "47 Warren St"
+puts "dottie's contact info is #{relative_contacts[:dottie]}"
+
+# Oh, frank changed his phone number.
+uncle_frank[:phone] = '978 677-4321'
+puts "franks contact info is #{relative_contacts[:frank]}"
 
