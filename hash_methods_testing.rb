@@ -51,28 +51,58 @@ state_abbr = {
   'WY' => 'Wyoming'
 }
 
-# Hash#each, iterates over all the entries in the hash
-{ "a" => 3, "b" => 2}.each { |key, val| puts "Key:value = #{key}:#{val}"}
-
-state_abbr.each do |k, v|
-  puts "State code #{k}, name is #{v}"
-end
-
-state_abbr.key?('WY')
-
 # Hash#key?
+# checks to see if a key is present in a hash.
+# boolean
+puts state_abbr.key? 'OH'
 
 # Hash#value?
+# checks to see if a value is present in a hash.
+# boolean
+puts state_abbr.value? 'Virginia'
 
 # Hash#to_a
+# converts a hash to an array
+puts state_abbr.to_a.join(', ')
 
 # Hash#find
+# Find a key value pair in the hash
+
+# Find the first entry where the value of the key value pair is four
+puts state_abbr.find{ |k,v| v.length == 4}.inspect
 
 # Hash#select
+# Find all key value pairs in a hash
+puts state_abbr.select { |k,v| v.length == 4}
 
 # Hash#merge
+# Returns a new hash where the duplicate keys get overridden by the hash argument
+dict = {"base"=>"foundation", "pedestal"=>"base"}
+added = {"base"=>"non-acid", "salt"=>"NaCl"}
+# merge added into dict hash
+# hash being merged in overwrites entries with the same key
+new_dict = dict.merge(added)
+puts new_dict
+
+# Simpler example
+# Below turns the value for 'AL' to 'foo' and then appends 'zz' => 'bar' to the end
+puts state_abbr.merge('AL' => 'foo', 'zz' => 'bar')
 
 # Hash#inject
+# AKA reduce
+# Takes a data structure as an argument
+# Iterates through each one getting the key and value
+
+puts
+
+# Takes an argument to "sum" or "product" and will set this in the block
+h1 = { a: 'foo', b: 'bar' }
+h2 = h1.inject({}) { |h, (k, v)| h[k.upcase] = v.upcase; h }
+puts h2
+
+puts
+
+puts (3..12).inject(4){ |sum, v| sum += v}
 
 # Hash#delete
 
